@@ -1,0 +1,41 @@
+@charset "utf-8";
+*, :is(::after, ::before){margin: 0px;padding: 0px;box-sizing: border-box;outline: none;list-style: none;text-decoration: none;}
+:root{
+    --bgBody:#202528;
+    --bgBox:#fff;
+    --borderRadiusBoxs:10px;
+}
+html, body{width: 100%;height: 100%;}
+body{font-family: 'Segoe UI', Tahoma, 'Geneva', Verdana, sans-serif;background-color: var(--bgBody);}
+body #container{ max-width: 1440px;width: inherit;height: inherit;margin: 0px auto;display: flex;}
+/* start areaFormLoginSignUp */
+body #container #areaForm{margin: auto;padding: 15px;border-radius: var(--borderRadiusBoxs);background-color: #fff;}
+body #container #areaForm .wrapperForm{margin: auto;background-color: #fff;}
+    /* start formSignUp */
+body #container #areaForm .Register .formRegister{width: 230px;padding: 0px 0px 15px 0px;}
+body #container #areaForm .Register .formRegister  div{margin-bottom: 10px;}
+body #container #areaForm .Register .formRegister  div > input{display: block;width: 100%;margin-top: 5px;padding: 3px;}
+body #container #areaForm .Register .formRegister > div:nth-child(1) > input.inpFirstName.valid{outline:1px solid rgb(000,255,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(1) > input.inpFirstName.invalid{outline:1px solid rgb(255,000,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(2) > input.inpLastName.valid{outline:1px solid rgb(000,255,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(2) > input.inpLastName.invalid{outline:1px solid rgb(255,000,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(3) > input.inpUserName.valid{outline:1px solid rgb(000,255,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(3) > input.inpUserName.invalid{outline:1px solid rgb(255,000,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(4) > input.inpEmail.valid{outline:1px solid rgb(000,255,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(4) > input.inpEmail.invalid{outline:1px solid rgb(255,000,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(5) > div{position: relative;}
+        /* icon Show Hiddden Password */
+body #container #areaForm .Register .formRegister > div:nth-child(5) > div > input.inpPassWord + a.iconShowPassword{position: absolute;right: 5px;bottom: 2.5px;cursor: pointer;}
+body #container #areaForm .Register .formRegister > div:nth-child(5) > div > input.inpPassWord.valid{outline:1px solid rgb(000,255,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(5) > div > input.inpPassWord.invalid{outline:1px solid rgb(255,000,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(6) > input.inpConfirmPassWord.valid{outline:1px solid rgb(000,255,000);}
+body #container #areaForm .Register .formRegister > div:nth-child(6) > input.inpConfirmPassWord.invalid{outline:1px solid rgb(255,000,000);}
+body #container #areaForm .Register .formRegister :is(div:nth-child(7), div:nth-child(9)) > input{display: inline-block;width: fit-content;}
+body #container #areaForm .Register .formRegister :is(div:nth-child(7), div:nth-child(9)) > input:last-child{margin-left: 10px;}
+body #container #areaForm .Register .formRegister  div:nth-child(7) > label{margin-right: 15px;}
+body #container #areaForm .Register .formRegister  div:nth-child(7) > label:not(label:first-of-type){margin-left: 5px;}
+
+body #container #areaForm .Register .formRegister div:nth-child(8) > input.inpBirthDay.invalid{outline:1px solid rgb(255,000,000);}
+body #container #areaForm .Register .formRegister div:nth-child(8) > input.inpBirthDay.valid{outline:1px solid rgb(000,2555,000);}
+body #container #areaForm .Register .formRegister div:last-child input.btnSignUp{background-color: rgb(25, 212, 128);border: none;padding: 5px 0px;font-size: 16px;cursor: pointer;}
+body #container #areaForm .Register > h5 .statusText{color: coral;display: inline-block;cursor: pointer;}
