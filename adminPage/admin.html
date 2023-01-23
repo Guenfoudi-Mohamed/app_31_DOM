@@ -1,0 +1,3236 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="admin.css" type="text/css" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    <!-- BoxIcons CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&family=Roboto:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+      <div id="container">
+        <!-- start header -->
+        <section id="sideBar">
+          <!-- logo -->
+          <div class="logo"><h1>LOGO</h1></div>
+          <!-- navigation -->
+          <nav>
+            <ul class="list">
+              <li class="item"><a class="active"><i class='bx bx-grid-alt'></i>Dashboard</a></li>
+              <li class="item"><a class=""><i class='bx bx-user'></i>Customers</a></li>
+              <li class="item"><a class=""><i class='bx bx-collection'></i>Categories<i class='bx bxs-chevron-down'></i></a>
+                <!-- start CategoryList -->
+                <ul class="CategoryList">
+                  <!-- start item -->
+                  <li ><a href="#allProduct">All</a></li>
+                  <!-- start item -->
+                  <li >
+                    <a class="sub s0">Technology & electronics<i class='bx bxs-chevron-down'></i></a>
+                    <!-- start SubCategoryList -->
+                    <ul class="SubCategoryList">
+                      <li><a href="#Television&video">Television & video<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Television</a></li>
+                          <li><a>Smart TVs</a></li>
+                          <li><a>Dvd Players & Recorders</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#Computing">Computing<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Computers</a></li>
+                          <li><a>Antivirus and security</a></li>
+                          <li><a>Computer Accesories</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#Phones&Tablet">Phones & Tablet<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Mobile Phones</a></li>
+                          <li><a>Tablets</a></li>
+                          <li><a>Mobile Accesories</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- start item -->
+                  <li ><a class="sub s1">Health & Beauty<i class='bx bxs-chevron-down'></i></a>
+                    <!-- start SubCategoryList -->
+                    <ul class="SubCategoryList">
+                      <li><a href="#MakeUp">Make Up<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Foundation</a></li>
+                          <li><a>Eyeshadow</a></li>
+                          <li><a>Powder</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#HairCare">Hair Care<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Hair & Scalp Care</a></li>
+                          <li><a>Shampoo & Conditioner</a></li>
+                          <li><a>Hair Accessories</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#HealthCare">Health Care<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Face Protection</a></li>
+                          <li><a>Lab, Safety & Work Gloves</a></li>
+                          <li><a>mascara</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <!-- start item -->
+                  <li ><a class="sub s2">Fashion<i class='bx bxs-chevron-down'></i></a>
+                    <!-- start SubCategoryList -->
+                    <ul class="SubCategoryList">
+                      <li><a href="#Women'sFashion">Women's Fashion<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Clothing</a></li>
+                          <li><a>Dresses</a></li>
+                          <li><a>Handbags & Wallets</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#Men'sFashion">Men's Fashion<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Clothing</a></li>
+                          <li><a>Traditional & Cultural Wear</a></li>
+                          <li><a>Shoes</a></li>
+                        </ul>
+                      </li>
+                      <li><a href="#Kid'sFashion">Kid's Fashion<i class='bx bxs-chevron-down'></i></a>
+                        <!-- start subSubCategoryList -->
+                        <ul class="subSubCategoryList">
+                          <li><a>Boy's Fashion</a></li>
+                          <li><a>Girl's Fashion</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li class="item"><a class=""><i class='bx bx-receipt'></i>Orders</a></li>
+              <li class="item"><a class=""><i class='bx bx-plus'></i>Add Product</a></li>
+              <li class="item"><a class=""><i class='bx bx-notification' ></i>Notification</a>
+                <div class="countNotifications"></div>
+              </li>
+              <li class="item"><a class=""><i class='bx bxs-user-account'></i>Account</a></li>
+            </ul>
+          </nav>
+          <!-- logOut -->
+          <button class="btnLogOut"><i class='bx bx-log-out'></i>LogOut</button>
+        </section>
+        <main id="main">
+          <!-- start left Section -->
+          <section class="leftSection" id="allProduct">
+            <!-- start Dashboard -->
+            <div class="Dashboard">
+              <h3>Dashboard</h3>
+              <div class="boxs">
+                <div class="box totalSale">
+                  <a class="icon"><i class='bx bxs-dollar-circle' ></i></a>
+                  <div class="content">
+                    <div class="contentLeft">
+                      <span>Total Sales</span>
+                      <h2 class="totalSales">$25.69</h2>
+                    </div>
+                    <div class="contentRight">
+                      <div class="circlePercent">
+                        <div class="circle"></div>
+                        <h3>10%</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box Orders">
+                  <a class="icon"><i class='bx bxs-shopping-bag-alt'></i></a>
+                  <div class="content">
+                    <div class="contentLeft">
+                      <span>Orders</span>
+                      <h2 class="orders">$25.69</h2>
+                    </div>
+                    <div class="contentRight">
+                      <div class="circlePercent">
+                        <div class="circle"></div>
+                        <h3>10%</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="box GrossProfit">
+                  <a class="icon"><i class='bx bx-money-withdraw'></i></a>
+                  <div class="content">
+                    <div class="contentLeft">
+                      <span>Gross Profit</span>
+                      <h2 class="grossProfit">$25.69</h2>
+                    </div>
+                    <div class="contentRight">
+                      <div class="circlePercent">
+                        <div class="circle"></div>
+                        <h3>10%</h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h3>Recent Orders</h3>
+              <!-- start Recent Orders -->
+              <div class="recentOrders">
+                <nav>
+                  <ul class="list">
+                    <li class="costumerName">name Costumer</li>
+                    <li class="productTitle">title Product</li>
+                    <li class="idProduct">Id Product</li>
+                    <li class="status">Status</li>
+                  </ul>
+                  <ul class="listItems">
+                    <!-- <li class="item">
+                      <span class="costumerName">mohamed guenfoudi</span>
+                      <span class="productTitle">pc hp i5 core 2</span>
+                      <span class="idProduct">12564sdf6we4f</span>
+                      <span class="status">Pending</span>
+                    </li> -->
+                  </ul>
+                </nav>
+                <button class="btnShowAll">Show All</button>
+              </div>
+            </div>
+            <!-- start customers -->
+            <div class="customers">
+              <h3>Users</h3>
+              <div class="btns-add-filter-user">
+                <button class="addUser" title="add User">add User</button>
+                <select class="filter">
+                  <option disabled selected>Filter Items</option>
+                  <option >FullName</option>
+                  <option >BirthDay</option>
+                  <option >Account Creation</option>
+                </select>
+              </div>
+              <!-- start users -->
+              <div class="users">
+                <!-- <article class="user">
+                  <div class="userHead">
+                    <div class="img">
+                      <img src="../images/user1.jpg">
+                    </div>
+                    <div class="btns-edite-delete-user">
+                      <button class="btnEdite" title="Edite User">Edite</button>
+                      <button class="btnDelete" title="Delete User">Delete</button>
+                    </div>
+                  </div>
+                  <div class="infoUser">
+                    <div>
+                      <label class="keyUser">id : </label><label class="idValue">M123546</label>
+                    </div>
+                    <div>
+                      <label class="keyUser">First Name : </label><label class="fullNameValue">mohamed guenfoudi</label>
+                    </div>
+                    <div>
+                      <label class="keyUser">Email : </label><label class="emailValue">mohamed.guenfoudi@hotmail.com</label>
+                    </div>
+                    <div>
+                      <label class="keyUser">Gender : </label><label class="genderValue">male</label>
+                    </div>
+                    <div>
+                      <label class="keyUser">Birthday : </label><label class="birthDayValue">22-05-2022</label>
+                    </div>
+                  </div>
+                </article> -->
+              </div>
+            </div>
+            <!-- start categories -->
+            <div class="categories" >
+              <!-- start category 0 -->
+              <h3 id="Television&video">Technology & electronics</h3>
+              <div class="category">
+                <!-- start subCategory 01 -->
+                <h3 >Television & video</h3>
+                <div class="subCategory">
+                  <!-- start subSubCategory 011 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Television</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <!-- start product -->
+                    <article class="product">     
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 012 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Smart TVs</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/SmartTVs.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 013 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Dvd Players & Recorders</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/DvdPlayers&Recorders.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <!-- start subCategory 02 -->
+                <h3 id="Computing">Computing</h3>
+                <div class="subCategory" id="Computing">
+                  <!-- start subSubCategory 021 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Computers</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Computers.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 022 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Antivirus and security</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/AntivirusAndSecurity.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 023 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Computer Accesories</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ComputerAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <!-- start subCategory 03 -->
+                <h3 id="Phones&Tablet">Phones & Tablet</h3>
+                <div class="subCategory" id="Phones&Tablet">
+                  <!-- start subSubCategory 031 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Mobile Phones</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobilePhones.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 032 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Tablets</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Tablets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 033 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Mobile Accesories</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/MobileAccesories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <!-- start category 1 -->
+              <h3 id="MakeUp">Health & Beauty</h3>
+              <div class="category">
+                <!-- start subCategory 11 -->
+                <h3 >Make Up</h3>
+                <div class="subCategory">
+                  <!-- start subSubCategory 110 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Foundation</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Foundation.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 112 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Eyeshadow</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Eyeshadow.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 113 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Powder</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Powder.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <!-- start subCategory 12 -->
+                <h3 id="HairCare">Hair Care</h3>
+                <div class="subCategory" >
+                  <!-- start subSubCategory 121 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Hair & Scalp Care</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Hair&ScalpCare.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 122 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Shampoo & Conditioner</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shampoo&Conditioner.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 123 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Hair Accessories</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/HairAccessories.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <!-- start subCategory 13 -->
+                <h3 id="HealthCare">Health Care</h3>
+                <div class="subCategory" >
+                  <!-- start subSubCategory 131 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Face Protection</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/FaceProtection.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 132 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Lab, Safety & Work Gloves</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Lab,Safety&WorkGloves.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 133 -->
+                  <div class="row-title-btn-subSubCategory"><h4>mascara</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/mascara.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+              <!-- start category 2 -->
+              <h3 id="Women'sFashion">Fashion</h3>
+              <div class="category">
+                <!-- start subCategory 21 -->
+                <h3 >Women's Fashion</h3>
+                <div class="subCategory">
+                  <!-- start subSubCategory 211 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Clothing</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingWomen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 212 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Dresses</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Dresses.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 213 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Handbags & Wallets</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Handbags&Wallets.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <!-- start subCategory 22 -->
+                <h3 id="Men'sFashion">Men's Fashion</h3>
+                <div class="subCategory" id="Men'sFashion">
+                  <!-- start subSubCategory 221 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Clothing</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/ClothingMen.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 222 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Traditional & Cultural Wear</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Traditional&CulturalWear.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 223 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Shoes</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Shoes.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+                <!-- start subCategory 23 -->
+                <h3 id="Kid'sFashion">Kid's Fashion</h3>
+                <div class="subCategory" id="Kid'sFashion">
+                  <!-- start subSubCategory 231 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Boy's Fashion</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Boy'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- start subSubCategory 232 -->
+                  <div class="row-title-btn-subSubCategory"><h4>Girl's Fashion</h4><h5><a class="btnShowAll">Show All</a></h5></div>
+                  <div class="subSubCategory">
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                    <article class="product">
+                      <div class="imgProduct"><img src="../images/Girl'sFashion.jpg" alt="photo product"></div>
+                      <div class="info">
+                        <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                        <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                      </div>
+                      <div class="btnsProducts">
+                        <button class="btnAddCard">Edit Product</button>
+                        <button class="btnSale">Remove Product</button>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- start Orders -->
+            <div class="orders">
+              <h3>Orders</h3>
+              <!-- start products Orders -->
+              <div class="productsOrders">
+                <!-- start product -->
+                <article class="proOrder">
+                  <div class="infoProduct"> <!-- start info prroduct -->
+                    <div class="imgProduct">
+                      <img class="img" src="../images/AntivirusAndSecurity.jpg" alt="product order">
+                    </div>
+                    <div class="price-quantity">
+                      <label>price : <span>50$</span></label>
+                      <label>quantity : <span>15P</span></label>
+                    </div>
+                  </div>
+                  <div class="infoUser-product">
+                    <label>id user : <span>21214s54gf</span></label>
+                    <label>id product : <span>21214s54gf</span></label>
+                    <label>title product : <span>title</span></label>
+                    <label>quantity user select : <input type="number" value='1' step="1" placeholder="1" min="1"></label>
+                    <label>status product : <span>pending</span></label>
+                  </div>
+                  <div class="btns-declined-delivered">
+                    <button title="Declined">Declined</button>
+                    <button title="Delivered">Delivered</button>
+                  </div>
+                </article>
+              </div>
+              <div class="emptyProductsOrders">
+                <h5>No orders</h5>
+              </div>
+            </div>
+            <!-- start addProduct -->
+            <div class="addProduct">
+              <h3>Add Product</h3>
+              <div class="btn-addProduct-trash">
+                <button title="add Product" class="btnAddProduct">add Product <i class='bx bx-plus'></i></button>
+                <!-- <button title="Archives" >Archives <i class='bx bxs-archive'></i></button> -->
+                <button title="Trash" class="btnTrash">Trash <i class='bx bx-trash'></i></button>
+              </div>
+              <!-- start products -->
+              <div class="products">
+                <!-- start product -->
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+                <article class="product">     
+                  <div class="imgProduct"><img src="../images/Television.jpg" alt="photo product"></div>
+                  <div class="info">
+                    <h5 class="titleProduct">Hp Dual Core/Core2 Duo PC + MONITOR Window 10 +Office 16</h5>
+                    <span class="priceProduct">1000$</span><span class="quantityProduct">25P</span>
+                  </div>
+                  <div class="btnsProducts">
+                    <button class="btnAddCard">Edit Product</button>
+                    <button class="btnSale">Remove Product</button>
+                  </div>
+                </article>
+              </div>
+            </div>
+            <!-- start Notification -->
+            <div class="notifications">
+              <h3>Notifications</h3>
+              <div class="containerNotifications">
+                <!-- <article id="A304512" class="notification greeting" data-read="false">
+                  <div class="msg">     
+                  <p class="msgNotification">We wish you the beginning of an outstanding <b>Adnan Guenfoudi</b> experience,<br>Welcome to our store.</p>
+                  </div>
+                  <div class="infoNotification">
+                    <span class="date">14/01/2023 - 19:53</span>
+                    <span class="sender"></span>
+                  </div>
+                </article> -->
+              </div>
+            </div>
+            <!-- start Account -->
+            <div class="account">
+              <h3>Account</h3>
+              <div class="infoAdmin">
+                <form>
+                  <div class="uploadPhoto">
+                    <a ><i class='bx bx-camera'></i></a>
+                    <img class="imgProfile" src="" data-text="imgSrc">
+                    <a ><i class='bx bx-camera'></i></a>
+                    <input type="file" title="upLoad your photo" accept="image/*">
+                  </div>
+                  <input type="text" placeholder="firstName" data-text="firstName"  class="inpFirstName">
+                  <input type="text" placeholder="LastName" data-text="LastName" class="inpLastName">
+                  <input type="text" placeholder="UserName" data-text="UserName" class="inpUserName" title="Must contain at least one uppercase">
+                  <input type="text" placeholder="Email" data-text="Email" class="inpEmail">
+                  <div> <!-- input password and icon show password-->
+                    <input type="password" placeholder="PassWord" data-text="PassWord" class="inpPassWord">
+                    <a class="iconShowHiddPassWord" title="show passWord"><i class='bx bx-low-vision'></i></a>
+                  </div>
+                  <input type="password" placeholder="confirm Password" class="inpPasswordConfirm">
+                  <div>
+                    <label >Gender</label>
+                    <input type="radio" class="male" value="male" name="gender" data-text="Gender" id="gender0"><label for="gender0">male</label><input type="radio" data-text="Gender" value="female" class="female" name="gender" id="gender1"><label for="gender1">female</label> 
+                  </div>
+                  <div>
+                    <label for="inpBirthDay" >BirthDay</label>
+                    <input type="date"  class="inpBirthDay" id="inpBirthDay" data-text="BirthDay"> 
+                  </div>
+                  <input type="button" class="btnSaveInfoAdmin" value="Save">
+                </form>
+              </div>
+            </div>
+          </section>
+          <!-- start section right -->
+          <section class="rightSection">
+            <!-- profileAdmin-mode-DL -->
+            <div class="profileAdmin-mode-DL">
+              <!-- mode dark/light -->
+              <div class="mode-dark-light">
+                <span class="sun" title="Light-mode"><i class='bx bx-sun'></i></span>
+                <span class="moon" title="Dark-mode"><i class='bx bx-moon'></i></span>
+              </div>
+              <!-- profile Admin -->
+              <div class="profileAdmin">
+                <div class="content">
+                  <span class="greetingPerson">Hey, <b>Name</b></span>
+                  <span class="typePerson">admin</span>
+                </div>
+                <div>
+                  <a><i class="bx bx-camera"></i></a>
+                  <img src="">
+                </div>
+              </div>
+            </div>
+            <h3>RecentUpdate</h3>
+            <!-- start recent Update -->
+            <div class="recentUpdate">
+              <!--<div class="adminNotification">                
+                <div class="img">
+                  <a><i class="bx bx-camera"></i></a>
+                  <img src="../images/user2.jpg">
+                </div>
+                <div class="content">
+                  <b>Mike Tyson</b>
+                  <p>received his order of night lion tech GPS drone.</p>
+                  <span class="date">5 Minutes Ago</span>
+                </div>
+              </div>
+              <div class="adminNotification">
+                <img src="../images/user2.jpg" alt="photoProfile">
+                <div class="content">
+                  <b>Mike Tyson</b>
+                  <p>received his order of night lion tech GPS drone.</p>
+                  <span class="date">5 Minutes Ago</span>
+                </div>
+              </div>
+              <div class="adminNotification">
+                <img src="../images/user3.jpg" alt="photoProfile">
+                <div class="content">
+                  <b>Mike Tyson</b>
+                  <p>received his order of night lion tech GPS drone.</p>
+                  <span class="date">5 Minutes Ago</span>
+                </div>
+              </div> -->
+            </div>
+            <!-- start sales Analytics -->
+            <h3>Sales Analytics</h3>
+            <div class="salesAnalytics">
+              <div class="newCustomer">
+                <a class="iconCustomer"><i class='bx bxs-user'></i></a>
+                <div class="titleNewCustomer">
+                  <h4>New Customer</h4>
+                </div>
+                <a class="percent">15%</a>
+                <a class="numberCustomer">20</a>
+              </div>
+            </div>
+            <div class="salesAnalytics">
+              <div class="newCustomer">
+                <a class="iconCustomer"><i class='bx bxs-cart'></i></a>
+                <div class="titleNewCustomer">
+                  <h4>Carts</h4>
+                </div>
+                <a class="percent">15%</a>
+                <a class="numberCustomer">20</a>
+              </div>
+            </div>
+            <!-- btn Add Product -->
+            <button class="btnAddProduct"><i class='bx bx-plus'></i>Add Products</button>
+          </section>
+        </main>
+      </div>
+      <!-- start PopUp add Product -->
+      <div id="popUpAddProduct" class="hidden">
+        <div class="containerPopUpAddProduct">
+          <a class="btnClosePopUpAddProduct" title="Close window"><i class='bx bx-x'></i></a>
+          <form>
+            <div class="uploadImageProduct">
+              <div class="img">
+                <a class="iconCamera"><i class='bx bx-camera' ></i></a>
+                <img class="imgProduct" src="">
+                <a class="iconCamera active"><i class='bx bx-camera' ></i></a>
+                <input type="file" title="upload" accept="image/*">
+              </div>
+              <span>Upload Image Product <i class='bx bx-upload'></i></span>
+            </div>
+            <input type="text" class="inpTitleProduct" autofocus title="Title Product" placeholder="title Product">
+            <select class="selectCategory">
+              <option selected disabled>select Item</option>
+              <!-- <option class="">Technology & electronics</option>
+              <option class="">Health & Beauty</option>
+              <option class="">Fashion</option> -->
+            </select>
+            <select class="selectSubCategory">
+              <option selected disabled>select Item</option>
+              
+            </select>
+            <select class="selectSubSubCategory">
+              <option selected disabled>select Item</option>
+              <!-- <option class=""></option>
+              <option class=""></option>
+              <option class=""></option>
+              <option class=""></option>
+              <option class=""></option> -->
+            </select>
+            <input type="text" class="inpPriceProduct" title="Only Number [0-9 \.]" placeholder="price Product">
+            <input type="text" class="inpQuantityProduct" title="Only Number [0-9]{3}" placeholder="quantity Product">
+            <input type="button" class="btnCreateProduct" title="Create Product" value="Create Product">
+          </form>
+        </div>
+      </div>
+      <!-- start PopUp Edite Product -->
+      <div id="popUpEditeProduct" class="hidden">
+        <div class="containerPopUpEditeProduct">
+          <a class="btnClosePopUpEditeProduct" title="Close window"><i class='bx bx-x'></i></a>
+          <form>
+            <div class="uploadImageProduct">
+              <div class="img">
+                <a class="iconCamera"><i class='bx bx-camera' ></i></a>
+                <img class="imgProduct" src="">
+                <a class="iconCamera active"><i class='bx bx-camera' ></i></a>
+                <input type="file" title="upload" accept="image/*">
+              </div>
+              <span>Upload Image Product <i class='bx bx-upload'></i></span>
+            </div>
+            <input type="text" class="inpTitleProduct" autofocus title="Title Product" placeholder="title Product">
+            <select class="selectCategory">
+              <option selected disabled>select Item</option>
+              <!-- <option class="">Technology & electronics</option>
+              <option class="">Health & Beauty</option>
+              <option class="">Fashion</option> -->
+            </select>
+            <select class="selectSubCategory">
+              <option selected disabled>select Item</option>
+            </select>
+            <select class="selectSubSubCategory">
+              <option selected disabled>select Item</option>
+              <!-- <option class=""></option>
+              <option class=""></option>
+              <option class=""></option>
+              <option class=""></option>
+              <option class=""></option> -->
+            </select>
+            <input type="text" class="inpPriceProduct" title="Only Number [0-9 \.]" placeholder="price Product">
+            <input type="text" class="inpQuantityProduct" title="Only Number [0-9]{3}" placeholder="quantity Product">
+            <input type="button" class="btnSaveProduct" title="Save" value="Save">
+          </form>
+        </div>  
+      </div>
+      <!-- start PopUp popUp Trash Product -->
+      <div id="popUpTrash" class="hidden">
+        <div class="containerPopUpTrash">
+          <a class="btnClosePopUpTrash" title="Close window"><i class='bx bx-x'></i></a>
+          <div class="products">
+
+          </div>
+        </div>  
+      </div>
+      <!-- start popUp delete product -->
+      <!-- <div id="popUpDeleteProduct" >
+        <div class="containerPopUpDeleteProduct">
+          <h4>Are you sure you want to delete this product ?</h4>
+          <div class="btns">
+            <input type="button" title="Yes" value="Yes"><input type="button" title="No" value="No">
+          </div>
+        </div>
+      </div> -->
+      
+      <!-- start pop up add user(costumer) -->
+      <div id="popUpAddUser" class="hidden">
+          <form class="formAddUser" id="formAddUser" action="" method="">
+            <a class="btnClosePopUpAddUser" title="Close window"><i class='bx bx-x'></i></a>
+              <div>
+                  <label for="inpFirstName">First Name</label>
+                  <input type="text" id="infFirstName" autofocus  class="inpFirstName name" maxlength="25" placeholder="first Name"> 
+              </div>
+              <div>
+                  <label for="inpLastName">last Name</label>
+                  <input type="text" id="inpLastName" class="inpLastName name" maxlength="25" placeholder="last Name"> 
+              </div>
+              <div>
+                  <label for="inpUserName">User Name</label>
+                  <input type="text" title="Must contain at least one uppercase" id="inpUserName" class="inpUserName" maxlength="25" placeholder="User Name"> 
+              </div>
+              <div>
+                  <label for="inpEmail">Email</label>
+                  <input type="email" id="inpEmail" class="inpEmail"  placeholder="email"> 
+              </div>
+              <div>
+                  <label for="inpPassWord">Password</label>
+                  <div >
+                      <input type="password" id="inpPassWord" class="inpPassWord" title="Must contain at least one uppercase , and at least 8 or more characters" maxlength="25" placeholder="password">
+                      <a class="iconShowPassword" title="show password">
+                      <!-- icon hidden Password -->
+                      <i class='bx bx-low-vision'></i></a>
+                      <!-- icon show Password --> 
+                      <!-- <i class='bx bx-show'></i> -->
+                  </div>
+              </div>
+              <div>
+                  <label for="inpConfirmPassWord">Confirm Password</label>
+                  <input type="password" id="inpConfirmPassWord" class="inpConfirmPassWord" maxlength="25" placeholder="password"> 
+              </div>
+              <div>
+                  <label >Gender</label>
+                  <input type="radio" class="male" value="male" name="gender" id="gender01"><label for="gender01">male</label><input type="radio" value="female" class="female" name="gender" id="gender10"><label for="gender10">female</label> 
+              </div>
+              <div>
+                  <label for="inpBirthDay">BirthDay</label>
+                  <input type="date"  class="inpBirthDay" max="2010-05-05" id="inpBirthDay"> 
+              </div>
+              <div>
+                  <label for="termPrimary">term Primary</label>
+                  <input type="checkbox" class="termPrimary" id="termPrimary"> 
+              </div>
+              <div>
+                  <input type="submit" value="Add User" class="btn btnAddUser">
+              </div>
+          </form>
+      </div>
+
+      <!-- start popUp Edite user(costumer) -->
+      <div id="popUpEditeUser" class="hidden">
+          <form class="formEditeUser" id="formEditeUser" action="" method="">
+            <a class="btnClosePopUpEditeUser" title="Close window"><i class='bx bx-x'></i></a>
+              <div>
+                  <label for="inpFirstName">First Name</label>
+                  <input type="text" id="infFirstName" autofocus  class="inpFirstName name" maxlength="25" placeholder="first Name"> 
+              </div>
+              <div>
+                  <label for="inpLastName">last Name</label>
+                  <input type="text" id="inpLastName" class="inpLastName name" maxlength="25" placeholder="last Name"> 
+              </div>
+              <div>
+                  <label for="inpUserName">User Name</label>
+                  <input type="text" title="Must contain at least one uppercase" id="inpUserName" class="inpUserName" maxlength="25" placeholder="User Name"> 
+              </div>
+              <div>
+                  <label for="inpEmail">Email</label>
+                  <input type="email" id="inpEmail" class="inpEmail"  placeholder="email"> 
+              </div>
+              <div>
+                  <label for="inpPassWord">Password</label>
+                  <div >
+                      <input type="password" id="inpPassWord" class="inpPassWord" title="Must contain at least one uppercase , and at least 8 or more characters" maxlength="25" placeholder="password">
+                      <a class="iconShowPassword" title="show password">
+                      <!-- icon hidden Password -->
+                      <i class='bx bx-low-vision'></i></a>
+                      <!-- icon show Password --> 
+                      <!-- <i class='bx bx-show'></i> -->
+                  </div>
+              </div>
+              <div>
+                  <label for="inpConfirmPassWord">Confirm Password</label>
+                  <input type="password" id="inpConfirmPassWord" class="inpConfirmPassWord" maxlength="25" placeholder="password"> 
+              </div>
+              <div>
+                  <label >Gender</label>
+                  <input type="radio" class="male" value="male" name="gender" id="gender001"><label for="gender001">male</label><input type="radio" value="female" class="female" name="gender" id="gender100"><label for="gender100">female</label> 
+              </div>
+              <div>
+                  <label for="inpBirthDay">BirthDay</label>
+                  <input type="date"  class="inpBirthDay" max="2010-05-05" id="inpBirthDay"> 
+              </div>
+              <!-- <div>
+                  <label for="termPrimary">term Primary</label>
+                  <input type="checkbox" class="termPrimary" id="termPrimary"> 
+              </div> -->
+              <div>
+                  <input type="submit" value="Save" title="Save Info" class="btn btnEditeUser">
+              </div>
+          </form>
+      </div>
+
+      <script src="mode-dark-light.js"></script>
+      <script src="sideBarItemDisplaySections.js" type="module"></script>
+      <script src="displayProductBtnShowALL&ShowLess.js" ></script>
+      <script src="upLoadPhoto.js" type="module"></script>
+      <script src="editeAccount.js" type="module"></script>
+      <!-- <script src="classAdminActive.js" type="module"></script> -->
+      <script src="addProduct.js" type="module"></script>
+      <script src="editeProduct.js" type="module"></script>
+      <script src="addCustomers.js" type="module"></script>
+      <script src="EditeCustomers.js" type="module"></script>
+      <script src="btnLogOut.js"></script>
+  </body>
+</html>
