@@ -93,6 +93,39 @@ class Admin{
         else if(itemsSideBar[4].classList.contains('active')){  //if itemSideBar 4 is active
             Admin.displayProduct(objProduct,4);
         }
+
+        // add notification to user about 'product' 
+
+          // set date to the notification 
+        const date = new Date();
+        let hour = Number(date.getHours());
+        hour < 10 ? `0${hour}` : hour;
+        let minutes = Number(date.getMinutes());
+        minutes = minutes < 10 ? `0${minutes}` : minutes;
+        let day = Number(date.getDate());
+        day = day < 10 ? `0${day}` : day;
+        let month = Number(date.getMonth()+1);
+        month = month < 10 ? `0${month}` : month;
+        let year = date.getFullYear();
+
+        Admin.dataBaseUser = JSON.parse(localStorage.getItem('dataBaseUser'));
+        Admin.dataBaseUser.forEach(function(user){
+          const onjNotification = {
+            id: user.id,
+            sender: `Admin`,
+            msg: `Admin has added a new product <b>${objProduct.titleProduct}</b>, Category : ${objProduct.Category}`,
+            read: false,
+            type: 'product',
+            year: year,
+            month: month,
+            day: day,
+            hour: hour,
+            minutes: minutes
+          }
+          user.notifications.push(onjNotification);
+        });
+        localStorage.removeItem('dataBaseUser');
+        localStorage.setItem('dataBaseUser',JSON.stringify(Admin.dataBaseUser));
     }
     static displayProduct = function(obj,itemIndex){
         let article = '';
@@ -941,20 +974,7 @@ class Admin{
           }
           localStorage.removeItem('dataBaseUserEdite');
           localStorage.setItem('dataBaseUserEdite',JSON.stringify(Admin.dataBaseUserEdite));
-          // if admin not upDate info data login user 
-          if(user.upDateDataLogin === false){
-            Admin.dataBaseUser = JSON.parse(localStorage.getItem('dataBaseUser'));
-            localStorage.removeItem('dataBaseUser');
-            for(let i = 0;i<Admin.dataBaseUser.length;i++){
-              if(Admin.dataBaseUser[i].id === user.id){
-                Admin.dataBaseUser.splice(i,1,user);
-                break;
-              }
-            }
-            localStorage.setItem('dataBaseUser',JSON.stringify(Admin.dataBaseUser));
-          }
-          // if admin upDate info data login user 
-          else if(user.upDateDataLogin){
+          if(user.upDateDataLogin === true){    // if admin upDate info data login user
             Admin.dataBaseUser = JSON.parse(localStorage.getItem('dataBaseUser'));
             localStorage.removeItem('dataBaseUser');
             const {firstName,LastName,Gender,BirthDay,upDateDataLogin} = user;
@@ -965,11 +985,53 @@ class Admin{
                 Admin.dataBaseUser[i].Gender = Gender;
                 Admin.dataBaseUser[i].BirthDay = BirthDay;
                 Admin.dataBaseUser[i].upDateDataLogin = upDateDataLogin;
+                
+                // add notification to user about 'dataLogin' 
+                  // set date to the notification 
+                const date = new Date();
+                let hour = Number(date.getHours());
+                hour < 10 ? `0${hour}` : hour;
+                let minutes = Number(date.getMinutes());
+                minutes = minutes < 10 ? `0${minutes}` : minutes;
+                let day = Number(date.getDate());
+                day = day < 10 ? `0${day}` : day;
+                let month = Number(date.getMonth()+1);
+                month = month < 10 ? `0${month}` : month;
+                let year = date.getFullYear();
+                
+                
+                const onjNotification = {
+                  id: user.id,
+                  sender: `Admin`,
+                  msg: `The administrator has changed the login information,<br><b>Email</b> : ${user.Email} , <b>UserName</b> : ${user.UserName} , <b>Password</b> : ${user.PassWord}`,
+                  read: false,
+                  type: 'dataLogin',
+                  year: year,
+                  month: month,
+                  day: day,
+                  hour: hour,
+                  minutes: minutes
+                }
+                Admin.dataBaseUser[i].notifications.push(onjNotification);
+                
                 break;
               }
             }
             localStorage.setItem('dataBaseUser',JSON.stringify(Admin.dataBaseUser));
           }
+          else{   // if admin not upDate info data login user 
+
+            Admin.dataBaseUser = JSON.parse(localStorage.getItem('dataBaseUser'));
+            localStorage.removeItem('dataBaseUser');
+            for(let i = 0;i<Admin.dataBaseUser.length;i++){
+              if(Admin.dataBaseUser[i].id === user.id){
+                Admin.dataBaseUser.splice(i,1,user);
+                break;
+              }
+            }
+            localStorage.setItem('dataBaseUser',JSON.stringify(Admin.dataBaseUser));
+          }
+
           const users = document.querySelector('body #container #main > section.leftSection .customers .users');
           for(let i = 0;i<users.childElementCount;i++){
             if(users.children[i].id === user.id){
