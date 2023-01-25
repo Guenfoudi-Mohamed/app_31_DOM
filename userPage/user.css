@@ -173,17 +173,17 @@ body #container #main .section .notifications .containerNotifications .notificat
 body #container #main .section .notifications .containerNotifications .notification.greeting .infoNotification .admin{float: right;}
 body #container #main .section .notifications .containerNotifications .notification.greeting[data-read="true"]{background-color: #b9b8b8;}
 body #container #main .section .notifications .containerNotifications .notification.greeting[data-read="true"] :is(.msgNotification, .infoNotification .date, .infoNotification .admin){color: #000;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin){background-color: var(--bgBoxs);padding: 15px 20px;border-radius: var(--borderRadiusBoxs);position: relative;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) > .btnRemoveNotif{position: absolute;right: 20px;font-size: 20px;cursor: pointer;top: 10px;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) :is(.msgNotification, .infoNotification .date, .infoNotification .admin){color: var(--color-Light-Dark-Mode);}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) .msgNotification{font-size: 15px;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) .msgNotification > span{font-weight: bold;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) .infoNotification{margin-top: 15px;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) .infoNotification :is(.date, .admin){font-size: 14px;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) .infoNotification .date{display: inline-block;word-spacing: 5px;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin) .infoNotification .sender{float: right;color:var(--color-Light-Dark-Mode);}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin)[data-read="true"]{background-color: #b9b8b8;}
-body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin)[data-read="true"] :is(.msgNotification, .infoNotification .date, .infoNotification .sender){color: #000;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount){background-color: var(--bgBoxs);padding: 15px 20px;border-radius: var(--borderRadiusBoxs);position: relative;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) > .btnRemoveNotif{position: absolute;right: 20px;font-size: 20px;cursor: pointer;top: 10px;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) :is(.msgNotification, .infoNotification .date, .infoNotification .admin){color: var(--color-Light-Dark-Mode);}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) .msgNotification{font-size: 15px;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) .msgNotification > span{font-weight: bold;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) .infoNotification{margin-top: 15px;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) .infoNotification :is(.date, .admin){font-size: 14px;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) .infoNotification .date{display: inline-block;word-spacing: 5px;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount) .infoNotification .sender{float: right;color:var(--color-Light-Dark-Mode);}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount)[data-read="true"]{background-color: #b9b8b8;}
+body #container #main .section .notifications .containerNotifications :is(.notification.order, .notification.product, .notification.dataLogin, .notification.dataAccount)[data-read="true"] :is(.msgNotification, .infoNotification .date, .infoNotification .sender){color: #000;}
 
         /* start Account */
 body #container #main .section .Account .infoUser{display:grid;height: inherit;}
