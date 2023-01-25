@@ -114,11 +114,17 @@ btnEditeUser.onclick = function(e){
             
             // set date of last edite info account
             const date = new Date();
-            const year = date.getFullYear();
-            const month = date.getMonth();
-            let day = date.getDate();
-            day = Number(day) > 9 ? day : `0${day}`;
-            obj.lastEditeInfoAccount = `${year}-${Number(month)+1}-${day}/${date.getHours()}:${date.getMinutes()}`;
+            let hour = Number(date.getHours());
+            hour < 10 ? `0${hour}` : hour;
+            let minutes = Number(date.getMinutes());
+            minutes = minutes < 10 ? `0${minutes}` : minutes;
+            let day = Number(date.getDate());
+            day = day < 10 ? `0${day}` : day;
+            let month = Number(date.getMonth()+1);
+            month = month < 10 ? `0${month}` : month;
+            let year = date.getFullYear();
+
+            obj.lastEditeInfoAccount = `${year}-${month}-${day}/${hour}:${minutes}`;
 
             obj.firstName = inpFullName[0].value;
             obj.LastName = inpFullName[1].value;
@@ -130,12 +136,12 @@ btnEditeUser.onclick = function(e){
             obj.status = true;
             dataBaseUser.find(function(user){   /// this step after user login and show his notification and database user change
                 if(obj.id === user.id){
-                    if((user.UserName.toLowerCase() !== obj.UserName.toLowerCase()) || (user.Email.toLowerCase() !== obj.Email.toLowerCase()) || (user.PassWord.toLowerCase() !== obj.PassWord.toLowerCase())){
+                    if((user.UserName !== obj.UserName) || (user.Email.toLowerCase() !== obj.Email.toLowerCase()) || (user.PassWord !== obj.PassWord)){
                         obj.upDateDataLogin = true;
                     }
-                    else{
-                        obj.upDateDataLogin = false;
-                    }
+                    // else{
+                    //     obj.upDateDataLogin = false;
+                    // }
                 }
             });
             Admin.updateInfoCustomer(obj);
