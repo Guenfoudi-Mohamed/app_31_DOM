@@ -974,10 +974,27 @@ class Admin{
           }
           localStorage.removeItem('dataBaseUserEdite');
           localStorage.setItem('dataBaseUserEdite',JSON.stringify(Admin.dataBaseUserEdite));
-          if(user.upDateDataLogin === true){    // if admin upDate info data login user
+
+
+          // set date to the notification 
+          const date = new Date();
+          let hour = Number(date.getHours());
+          hour < 10 ? `0${hour}` : hour;
+          let minutes = Number(date.getMinutes());
+          minutes = minutes < 10 ? `0${minutes}` : minutes;
+          let day = Number(date.getDate());
+          day = day < 10 ? `0${day}` : day;
+          let month = Number(date.getMonth()+1);
+          month = month < 10 ? `0${month}` : month;
+          let year = date.getFullYear();
+
+          
+          // if admin upDate info data login user
+          if(user.upDateDataLogin === true){    
             Admin.dataBaseUser = JSON.parse(localStorage.getItem('dataBaseUser'));
             localStorage.removeItem('dataBaseUser');
             const {firstName,LastName,Gender,BirthDay,upDateDataLogin} = user;
+
             for(let i = 0;i<Admin.dataBaseUser.length;i++){
               if(Admin.dataBaseUser[i].id === user.id){
                 Admin.dataBaseUser[i].firstName = firstName;
@@ -987,18 +1004,6 @@ class Admin{
                 Admin.dataBaseUser[i].upDateDataLogin = upDateDataLogin;
                 
                 // add notification to user about 'dataLogin' 
-                  // set date to the notification 
-                const date = new Date();
-                let hour = Number(date.getHours());
-                hour < 10 ? `0${hour}` : hour;
-                let minutes = Number(date.getMinutes());
-                minutes = minutes < 10 ? `0${minutes}` : minutes;
-                let day = Number(date.getDate());
-                day = day < 10 ? `0${day}` : day;
-                let month = Number(date.getMonth()+1);
-                month = month < 10 ? `0${month}` : month;
-                let year = date.getFullYear();
-                
                 
                 const onjNotification = {
                   id: user.id,
@@ -1013,7 +1018,7 @@ class Admin{
                   minutes: minutes
                 }
                 Admin.dataBaseUser[i].notifications.push(onjNotification);
-                
+
                 break;
               }
             }
@@ -1025,7 +1030,25 @@ class Admin{
             localStorage.removeItem('dataBaseUser');
             for(let i = 0;i<Admin.dataBaseUser.length;i++){
               if(Admin.dataBaseUser[i].id === user.id){
-                Admin.dataBaseUser.splice(i,1,user);
+                Admin.dataBaseUser[i].firstName = user.firstName;
+                Admin.dataBaseUser[i].LastName = user.LastName;
+                Admin.dataBaseUser[i].Gender = user.Gender;
+                Admin.dataBaseUser[i].BirthDay = user.BirthDay;
+                // add notification to user about 'dataLogin' 
+                
+                const onjNotification = {
+                  id: user.id,
+                  sender: `Admin`,
+                  msg: `The administrator has changed your Account information ,<br><b>firstName</b> : ${user.firstName} , <b>LastName</b> : ${user.LastName} , <b>Gender</b> : ${user.Gender} , <b>BirthDay</b> : ${user.BirthDay}`,
+                  read: false,
+                  type: 'dataAccount',
+                  year: year,
+                  month: month,
+                  day: day,
+                  hour: hour,
+                  minutes: minutes
+                }
+                Admin.dataBaseUser[i].notifications.push(onjNotification);
                 break;
               }
             }
