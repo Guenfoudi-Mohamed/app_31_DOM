@@ -89,8 +89,8 @@ class userNotifications{
                       <span class="sender">${notification.sender}</span>
                     </div>`;
                     break;
-                case 'order':
-                    console.log(notification.msg);
+                case 'order':       // order
+                case 'product':     // product
                     article.innerHTML = `
                     <div class="msg">     
                         <p class="msgNotification">${notification.msg}</p>
@@ -101,6 +101,35 @@ class userNotifications{
                     </div>`;
                     article.querySelector('.msgNotification').innerHTML = `${notification.msg}`;
                     notification.read = true;
+                    break;
+                case 'dataLogin':   // data Login
+                    article.innerHTML = `
+                    <div class="msg">     
+                        <p class="msgNotification">${notification.msg}</p>
+                    </div>
+                    <div class="infoNotification">
+                      <span class="date">${notification.day}/${notification.month}/${notification.year} - ${notification.hour}:${notification.minutes}</span>
+                      <span class="sender">${notification.sender}</span>
+                    </div>`;
+                    article.querySelector('.msgNotification').innerHTML = `${notification.msg}`;
+
+                    notification.read = true;
+                    if(user.upDateDataLogin === true){
+                        user.upDateDataLogin = false;
+                        const dataBaseUserEdite = JSON.parse(localStorage.getItem('dataBaseUserEdite'));
+                        for(let i = 0;i<dataBaseUserEdite.length;i++){
+                            if(dataBaseUserEdite[i].id === user.id){
+                                const {Email ,UserName ,PassWord} = dataBaseUserEdite[i];
+                                user.Email = Email;
+                                user.UserName = UserName; 
+                                user.PassWord = PassWord;
+                                dataBaseUserEdite[i].upDateDataLogin = false;
+                                break;
+                            }
+                        }
+                        localStorage.removeItem('dataBaseUserEdite');
+                        localStorage.setItem('dataBaseUserEdite',JSON.stringify(dataBaseUserEdite));
+                    }
                     break;
             }
             containerNotifications.insertBefore(article,containerNotifications.children[0]);
