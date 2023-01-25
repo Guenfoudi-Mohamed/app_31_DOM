@@ -91,6 +91,7 @@ class userNotifications{
                     break;
                 case 'order':       // order
                 case 'product':     // product
+                case 'dataAccount':     // dataAccount
                     article.innerHTML = `
                     <div class="msg">     
                         <p class="msgNotification">${notification.msg}</p>
